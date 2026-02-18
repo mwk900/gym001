@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" fill="none">
+  <rect width="1200" height="800" fill="#121923"/>
+  <rect x="80" y="80" width="1040" height="640" rx="24" fill="#0B0F14" stroke="#8DFF2F" stroke-opacity="0.35"/>
+  <circle cx="380" cy="360" r="120" fill="#243446"/>
+  <rect x="230" y="500" width="300" height="26" rx="13" fill="#8DFF2F"/>
+  <rect x="600" y="270" width="390" height="18" rx="9" fill="#d7dee8"/>
+  <rect x="650" y="244" width="24" height="72" rx="12" fill="#d7dee8"/>
+  <rect x="910" y="244" width="24" height="72" rx="12" fill="#d7dee8"/>
+  <text x="120" y="170" fill="#eef2f6" font-size="54" font-family="Arial" font-weight="700">NorthPeak Performance Demo</text>
+  <text x="120" y="230" fill="#9fb2c9" font-size="30" font-family="Arial">Strength coaching visual placeholder</text>
+</svg>
