@@ -41,9 +41,9 @@ export default function HomePage() {
     <>
       <Header />
       <main>
-        <section className="bg-hero-gradient pb-20 pt-16">
-          <div className="section-wrap grid items-center gap-10 lg:grid-cols-2">
-            <div className="space-y-6">
+        <section className="bg-hero-gradient pb-16 pt-12 sm:pb-20 sm:pt-16">
+          <div className="section-wrap grid items-center gap-8 sm:gap-10 lg:grid-cols-2">
+            <div className="space-y-4 sm:space-y-6">
               <p className="inline-block rounded-full border border-accent/40 bg-accent/10 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-accent">
                 Nottingham Strength Coaching
               </p>
@@ -53,8 +53,8 @@ export default function HomePage() {
               <p className="max-w-xl text-lg text-white/75">
                 1:1 coaching and small-group sessions focused on strength, muscle, and performance — built around your schedule.
               </p>
-              <div className="flex flex-wrap gap-3">
-                <a href="#contact" className="btn-primary">Book a Free Consultation</a>
+              <div className="flex flex-wrap gap-2.5 sm:gap-3">
+                <a href="#contact" className="btn-primary shadow-[0_10px_24px_rgba(141,255,47,0.18)]">Book a Free Consultation</a>
                 <a href="#programs" className="btn-secondary">View Programs</a>
               </div>
               <div className="grid max-w-xl grid-cols-3 gap-3 text-sm">
@@ -69,7 +69,12 @@ export default function HomePage() {
               <p className="text-xs text-white/50">Demo trust bar: featured podcast, local event speaker, coaching workshop panel.</p>
             </div>
             <div className="relative">
-              <Image src="/hero-training.svg" alt="Coach guiding athlete with barbell" width={720} height={520} className="card w-full object-cover p-2" priority />
+              <div className="card relative aspect-[18/13] w-full overflow-hidden p-2">
+                <div className="relative h-full w-full overflow-hidden rounded-xl">
+                  <Image src="/gym/hero.jpg" alt="Athlete training with barbell in gym" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" priority />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/5" />
+                </div>
+              </div>
             </div>
           </div>
         </section>

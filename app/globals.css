@@ -12,7 +12,9 @@ body {
 }
 
 body {
-  background-image: radial-gradient(circle at top, rgba(141, 255, 47, 0.08), transparent 35%);
+  background-image:
+    radial-gradient(circle at top, rgba(141, 255, 47, 0.08), transparent 35%),
+    repeating-radial-gradient(circle at 0 0, rgba(255, 255, 255, 0.025) 0 1px, transparent 1px 3px);
 }
 
 .section-wrap {
@@ -24,9 +26,9 @@ body {
 }
 
 .btn-primary {
-  @apply inline-flex items-center justify-center rounded-xl bg-accent px-5 py-3 font-semibold text-black transition hover:brightness-95;
+  @apply inline-flex min-h-[44px] items-center justify-center rounded-xl bg-accent px-5 py-3 font-semibold text-black transition hover:brightness-95;
 }
 
 .btn-secondary {
-  @apply inline-flex items-center justify-center rounded-xl border border-white/30 px-5 py-3 font-semibold text-ink transition hover:border-accent hover:text-accent;
+  @apply inline-flex min-h-[44px] items-center justify-center rounded-xl border border-white/30 px-5 py-3 font-semibold text-ink transition hover:border-accent hover:text-accent;
 }
