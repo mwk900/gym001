@@ -4,31 +4,88 @@
 
 :root {
   color-scheme: dark;
+  --accent: #FF6B35;
+  --secondary: #4ECDC4;
+  --tertiary: #A78BFA;
 }
 
 html,
 body {
-  @apply bg-base text-ink antialiased;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  background-color: #0A0A0A;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Mobile bottom bar spacing */
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
-body {
-  background-image:
-    radial-gradient(circle at top, rgba(141, 255, 47, 0.08), transparent 35%),
-    repeating-radial-gradient(circle at 0 0, rgba(255, 255, 255, 0.025) 0 1px, transparent 1px 3px);
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-space-grotesk), system-ui, sans-serif;
+}
+
+/* Mobile bottom bar body padding */
+@media (max-width: 767px) {
+  body {
+    padding-bottom: calc(76px + env(safe-area-inset-bottom));
+  }
 }
 
 .section-wrap {
-  @apply mx-auto w-full max-w-6xl px-4 md:px-6;
+  @apply mx-auto w-full max-w-6xl px-5 md:px-6 lg:px-8;
 }
 
-.card {
-  @apply rounded-2xl border border-white/10 bg-panel/70 backdrop-blur;
+/* Dark section cards */
+.card-dark {
+  @apply rounded-2xl border border-[#2A2A2A] bg-[#141414];
 }
 
+/* Light section cards */
+.card-light {
+  @apply rounded-2xl border border-[#EAEAE6] bg-white;
+}
+
+/* Buttons */
 .btn-primary {
-  @apply inline-flex min-h-[44px] items-center justify-center rounded-xl bg-accent px-5 py-3 font-semibold text-black transition hover:brightness-95;
+  @apply inline-flex min-h-[48px] items-center justify-center rounded-xl bg-accent px-6 py-3 font-semibold text-white transition-all duration-200 hover:bg-[#E55A28] hover:scale-[1.02] active:scale-[0.98];
 }
 
 .btn-secondary {
-  @apply inline-flex min-h-[44px] items-center justify-center rounded-xl border border-white/30 px-5 py-3 font-semibold text-ink transition hover:border-accent hover:text-accent;
+  @apply inline-flex min-h-[48px] items-center justify-center rounded-xl border border-[#2A2A2A] px-6 py-3 font-semibold text-white transition-all duration-200 hover:border-accent hover:text-accent;
+}
+
+.btn-secondary-light {
+  @apply inline-flex min-h-[48px] items-center justify-center rounded-xl border border-[#EAEAE6] px-6 py-3 font-semibold text-[#1A1A1A] transition-all duration-200 hover:border-accent hover:text-accent;
+}
+
+/* Tabular numbers for metrics */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* Horizontal scroll snap for pricing on mobile */
+.snap-x-container {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.snap-x-item {
+  scroll-snap-align: center;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #141414;
+}
+::-webkit-scrollbar-thumb {
+  background: #2A2A2A;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF6B35;
 }
