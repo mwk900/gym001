@@ -119,13 +119,6 @@ export function Header() {
               {link.label}
             </button>
           ))}
-          <button
-            type="button"
-            onClick={() => navigate("#contact")}
-            className="btn-primary mt-4 w-full justify-center"
-          >
-            Book Free Session
-          </button>
         </nav>
       </div>
     </>
