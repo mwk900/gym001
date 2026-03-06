@@ -145,20 +145,6 @@ export function Hero() {
             1:1 strength coaching and programming for busy people in Nottingham.
           </motion.p>
 
-          {/* CTAs */}
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.85, ease: [0.25, 0.1, 0.25, 1] }}
-            className="flex flex-wrap gap-3"
-          >
-            <a href="#contact" className="btn-primary">
-              Book your free session
-            </a>
-            <a href="#programs" className="btn-secondary">
-              View programs
-            </a>
-          </motion.div>
 
           {/* Trust badges */}
           <motion.div
