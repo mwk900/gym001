@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { motion, useAnimate, animate } from "framer-motion";
+import { motion, animate } from "framer-motion";
 import Image from "next/image";
 
 const metrics = [

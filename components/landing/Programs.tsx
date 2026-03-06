@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 type Phase = {
   label: string;
@@ -149,11 +149,9 @@ export function Programs() {
           {programs.map((program, index) => {
             const isOpen = openId === program.id;
             return (
-              <motion.article
+              <article
                 key={program.id}
-                layout
                 className="overflow-hidden rounded-2xl border border-[#2A2A2A] bg-[#141414]"
-                transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
               >
                 {/* Card header - always visible */}
                 <button
@@ -264,7 +262,7 @@ export function Programs() {
                     </motion.div>
                   )}
                 </AnimatePresence>
-              </motion.article>
+              </article>
             );
           })}
         </div>

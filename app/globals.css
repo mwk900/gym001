@@ -9,6 +9,26 @@
   --tertiary: #A78BFA;
 }
 
+html {
+  /* Smooth scrolling for desktop anchor links */
+  scroll-behavior: smooth;
+}
+
+/* Offset all named sections by header height so the sticky bar never covers them */
+section[id] {
+  scroll-margin-top: 72px;
+}
+
+/* Honour user motion preference — cut all animations if requested */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 html,
 body {
   font-family: var(--font-inter), system-ui, sans-serif;
